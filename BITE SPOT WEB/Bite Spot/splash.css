@@ -1,26 +1,27 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #FF9202    ; /* Orange background */
+    height: 100vh;
+    background-color: #ff9202;
 }
 
 .splash-container {
     display: flex;
-    flex-direction: row; /* Arrange items in a row */
-    align-items: center; /* Center items vertically */
-    width: 80%; /* Occupy most of the screen width */
-    max-width: 1200px; /* Set a maximum width */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
 }
 
 .burger-image {
-    width: 50%; /* Adjust width as needed */
+    width: 40%; /* Adjust width as needed */
     height: auto;
     order: 2; /* Place image on the right */
-    margin-left: 20px; /* Add some space between text and image */
+    margin-left: 0px; /* Add some space between text and image */
+    padding-right: 10%;
 }
 
 .text-content {
@@ -28,52 +29,30 @@ body, html {
     text-align: center; /* Align text to the left */
     width: 50%; /* Adjust width as needed */
     margin-left: 40px; /* Increase the margin between text and the burger image */
-    padding: 50px; /* Optional: Adds internal space around the text */
+    padding-left: 10%; /* Optional: Adds internal space around the text */
+    font-family: monts;
+
     
 }
-
 
 
 .app-name {
     font-size: 4rem;
     color: white;
     margin: 20px 0;
+    font-family: monts;
+
 }
 
-.loading {
-    font-size: 1.5rem;
-    color: white;
-    margin-top: 20px;
-}
 
 @font-face {
-    font-family: 'My Font';
-    src: url('leaguespartan.otf".ttf') format('truetype'); /* For TrueType font */
-    font-weight: normal;
-    font-style: normal;
-}
+    font-family: monts;
+    src: url(fonts/montserrat-regular.ttf);
+  }
+  
 
 body {
     font-family: 'MyCustomFont', sans-serif;
 }
 
 
-.loading::after {
-    content: '';
-    display: inline-block;
-    margin-left: 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: white;
-    animation: loadingDots 1s infinite ease-in-out;
-}
-
-@keyframes loadingDots {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-}
