@@ -4,22 +4,22 @@ body, html {
   font-family: Arial, sans-serif;
   background-color: #fff;
   font-family: monts;
+  
 }
 
 header {
-  background-color: #FF9202;
-  padding: 0px; /* Reduce padding for closer alignment */
-  text-align: left;
-  position: absolute;
-  width: 100%; 
-  height: auto;
-  margin-top: 5px 5px 5px; /* Adjust margin to lower the header */
-
+  background-color: #ffffff; /* Background color for header */
+  padding: 5px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure header stretches across the screen */
+  z-index: 1000;
 }
 
 header h1 {
   margin: 0;
-  color: white;
+  color: #FF9202;
   font-size: 2.5rem;
   display: inline-block;
   font-family: monts;
@@ -37,18 +37,26 @@ header p {
 
 nav ul {
   list-style-type: none;
-  margin-top: 5px;
+  top: 50px;
   padding: 10px;
-  background-color: #FF9202;
+  background-color: #ffffff;
   text-align: right;
-  position: absolute;
+  position: fixed;
   top: 40px; /* Move navigation below the header */
   right: 0;
   width: 100%; /* Ensure it stretches across the width */
   font-size: 1rem;
   margin-left: 20px;
-
+  z-index: 999;
+  font-family: monts;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+  border-bottom: 1.5px solid #1f1f1f2e; /* Add border only below */
 }
+
+nav ul.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352); /* Shadow when scrolled */
+}
+
 
 
 nav ul li {
@@ -59,7 +67,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #FF9202;
   font-weight: bold;
 }
 
@@ -75,6 +83,9 @@ nav ul li a {
   width: 40%;
 
 }
+
+
+
 
 .restaurant-grid {
   display: grid;
@@ -95,10 +106,16 @@ nav ul li a {
   margin-bottom: 20px;
   transition: transform 0.3s ease; /* Add a hover effect */
   text-decoration: none ;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1f1f1f2e;
+  
 }
 
 .restaurant:hover {
   transform: scale(1.03); /* Slightly enlarge the card on hover */
+  background-color: #c9c9c95a; /* Change background color on hover */
+  color: #FF9202;
 }
 
 .restaurant img {
@@ -124,7 +141,7 @@ nav ul li a {
 .restaurant-title {
   text-align: left;
   margin-bottom: 30px;
-  color: #FF9202;
+  color: #4d4d4d;
   font-size: 2rem;
   padding-left: 20px;
 
@@ -138,7 +155,7 @@ nav ul li a {
 .review-title {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #161616;
+  color: #4d4d4d;
   margin-left: 10px;
 }
 
@@ -178,7 +195,7 @@ nav ul li a {
 .review-title {
   text-align: center;
   margin-bottom: 30px;
-  color: #FF9202;
+  color: #4d4d4d;
   font-size: 2rem;
 }
 @font-face {
