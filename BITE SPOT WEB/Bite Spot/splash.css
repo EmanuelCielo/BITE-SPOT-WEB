@@ -5,7 +5,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    background-color: #ff9202;
+    background-color: white;
 }
 
 .splash-container {
@@ -38,7 +38,7 @@ body, html {
 
 .app-name {
     font-size: 4rem;
-    color: white;
+    color: #ff9202;
     margin: 20px 0;
     font-family: monts;
 
