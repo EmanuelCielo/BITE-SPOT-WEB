@@ -69,26 +69,80 @@ nav ul li a:hover{
 }
 
 
-.search-container{
+/* Fullscreen container for the search */
+.search-container {
   width: 100%;
   height: 100vh;
   display: flex;
-}
-.search input[type=text] {
-  align-items: center;
-  padding: 10px ;
-  width:80%;
-  margin-left: 100px;
-  margin-top: 100px;
-  border: 1px solid;
-  border-color:#1f1f1f2e ;
-  font-size: 17px;
-  border-radius: 20px;
-  background-color: #c2c2c2;
-  box-shadow: #333;
-  
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-image: url('bg.png'); /* Add your background image here */
+  background-size: cover; /* Make sure the background covers the whole container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; 
+
 }
 
+/* Container for the welcome text and search elements */
+.search-box {
+  text-align: center; /* Center align text */
+}
+
+/* Styling for the welcome text */
+.welcome-text {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styling for the search and button */
+.search {
+  display: flex;
+  justify-content: center; /* Center the search field and button */
+}
+
+/* Styling for the search input */
+.search input[type=text] {
+  padding: 15px;
+  width: 60%; /* Reduce width a bit to make space for the button */
+  max-width: 500px; /* Limit max width */
+  border: 2px solid #1f1f1f2e;
+  font-size: 17px;
+  border-radius: 20px 0 0 20px; /* Rounded corners on the left */
+  background-color: #f3f3f3;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Styling for the search button */
+.search button {
+  padding: 10px 30px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #FF9202; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 0 20px 20px 0; /* Rounded corners on the right */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add hover effect for the button */
+.search button:hover {
+  background-color: #e87c00;
+}
+
+/* Hover effect on the search input */
+.search input[type=text]:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus effect on the search input */
+.search input[type=text]:focus {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  border-color: #FF9202;
+}
 
 
 .restaurant-grid {

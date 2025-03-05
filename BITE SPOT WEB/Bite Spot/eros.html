@@ -4,63 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Details</title>
-    <style>
-        .restaurant-grid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-        .restaurant {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-        .restaurant img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .restaurant h3 {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .rating {
-            color: gold;
-            font-size: 1.2em;
-        }
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="resto-info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+
 </head>
 <body>
 
-    <div class="restaurant-grid">
-        <a href="eros.html" class="restaurant">
+    <div class="back-button">
+        <a href="homepage.html"><i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="restaurant-container">
+        <div class="restaurant">
+          <img src="eros.jpg" alt="Restaurant Image">
+          <div class="restaurant-info">
             <h3>Eros Carinderia</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <img src="eros.jpg" alt="Restaurant Image">
             <p class="rating">★★★★★</p>
-        </a>
-        <a href="homepage.html" class="back-button">Back to Homepage</a>
-    </div>
+            <p class="location">
+                <a href="https://maps.app.goo.gl/fmZ3vjZNm65Gtb6g8" class="restaurant-location" target="_blank">
+                     View Location
+                </a>
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+           
+        
+          </div>
+          <div class="actions">
+            <button><i class="fas fa-heart"></i> </button>
+            <button><i class="fas fa-comment"></i> </button>
+            <button><i class="fas fa-share"></i> </button>
+          </div>
+        </div>
+      
+        <!-- Review Section -->
+        <div class="reviews">
+          <h3>Reviews:</h3>
+          <div class="review-card">
+            <p>"Great food, great atmosphere!"</p>
+            <p class="reviewer">- John Doe</p>
+          </div>
+          
+          <div class="review-card">
+            <p>"Loved the service and the food is amazing."</p>
+            <p class="reviewer">- Jane Doe</p>
+          </div>
+          <div class="review-card">
+            <p>"Loved the service and the food is amazing."</p>
+            <p class="reviewer">- Jane Doe</p>
+          </div>
 
+
+          <!-- Add more reviews as needed -->
+        </div>
+      </div>
+      
 </body>
 </html>

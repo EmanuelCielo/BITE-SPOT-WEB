@@ -1,0 +1,147 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-family: monts;
+    
+  }.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+  }
+  
+  .back-button a {
+    text-decoration: none;
+    color: #FF9202;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button a:hover {
+    color: #a65f02;
+  }
+    
+  
+.restaurant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Horizontal Card Layout */
+  .restaurant {
+    display: flex;
+    background-color: #e7e7e75a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352);
+    width: 80%; /* Takes 80% of the screen width */
+    text-align: left;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 30px;
+    border: 1px solid #1f1f1f2e;
+    position: relative;
+    height: 100%; /* Make sure the card takes the full height */
+
+  }
+
+  
+  
+  
+  /* Image on the Left */
+  .restaurant img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+/* Restaurant Card Layout */
+.restaurant {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    background-color: #e7e7e75a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352);
+    width: 80%;
+    text-align: left;
+    margin-bottom: 30px;
+    border: 1px solid #1f1f1f2e;
+    position: relative;
+  }
+  
+  /* Content Flex - Grow Content Area */
+  .restaurant-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Let the content grow and push the actions to the bottom */
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Space between buttons */
+    margin-top: auto; /* Pushes actions to the bottom of the card */
+  }
+  
+  /* Optional: Adjust icon size and spacing */
+  .actions button {
+    background: none;
+    border: none;
+    color: #e7e7e75a;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+    -webkit-text-stroke: 2px #FF9202;
+  }
+  
+  .actions button:hover {
+    color: #FF9202;
+  }
+  
+  .actions button:focus {
+    outline: none;
+  }
+    
+    
+  
+  /* Reviews Section */
+  .reviews {
+    width: 50%;
+    margin-top: 20px;
+  }
+  
+  .reviews h3 {
+    margin-bottom: 15px;
+  }
+  
+  .review-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .review-card p {
+    margin: 5px 0;
+  }
+  
+  .review-card .reviewer {
+    font-style: italic;
+    color: #555;
+  }
+  
+
+  @font-face {
+    font-family: monts;
+    src: url(fonts/montserrat-regular.ttf);
+  }
+  
