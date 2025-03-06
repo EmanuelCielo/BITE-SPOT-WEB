@@ -1,147 +1,261 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background and font settings */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    font-family: monts;
-    
-  }.back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 2em;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  font-family: monts;
+
+}
+header {
+  background-color: #ffffff; /* Background color for header */
+  padding: 5px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure header stretches across the screen */
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  color: #FF9202;
+  font-size: 2rem;
+  display: inline-block;
+  font-family: monts;
+  padding-left: 20px;
   
-  .back-button a {
-    text-decoration: none;
-    color: #FF9202;
-    transition: color 0.3s ease;
-  }
-  
-  .back-button a:hover {
-    color: #a65f02;
-  }
-    
-  
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  background-color: #ffffff;
+  text-align: right;
+  position: fixed;
+  top: 45px; /* Move navigation below the header */
+  right: 0;
+  width: 100%; /* Ensure it stretches across the width */
+  font-size:small;
+  z-index: 999;
+  font-family: monts;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+  border-bottom: 1.5px solid #1f1f1f2e; /* Add border only below */
+}
+
+nav ul.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352); /* Shadow when scrolled */
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FF9202;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px;
+  margin-right: 20px;
+}
+
+
+nav ul li a:hover{
+  background-color: #ff960ddd; /* Change background color on hover */
+  color: white;
+}
+
+
+
+/* Back button styling */
+.back-button {
+  position: flex;
+  margin-top: 85px;
+  margin-left: 30px;
+  font-size: 2rem;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: #FF9202;
+  transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+  color: #a65f02;
+}
+
+/* Restaurant Container */
 .restaurant-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  /* Horizontal Card Layout */
-  .restaurant {
-    display: flex;
-    background-color: #e7e7e75a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352);
-    width: 80%; /* Takes 80% of the screen width */
-    text-align: left;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    margin-bottom: 30px;
-    border: 1px solid #1f1f1f2e;
-    position: relative;
-    height: 100%; /* Make sure the card takes the full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  }
-
-  
-  
-  
-  /* Image on the Left */
-  .restaurant img {
-    width: 40%;
-    height: auto;
-    border-radius: 10px;
-    margin-right: 20px;
-  }
-  
-/* Restaurant Card Layout */
+/* Horizontal Card Layout */
 .restaurant {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    background-color: #e7e7e75a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352);
-    width: 80%;
-    text-align: left;
-    margin-bottom: 30px;
-    border: 1px solid #1f1f1f2e;
-    position: relative;
-  }
-  
-  /* Content Flex - Grow Content Area */
-  .restaurant-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1; /* Let the content grow and push the actions to the bottom */
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: flex-start; /* Align buttons to the left */
-    gap: 10px; /* Space between buttons */
-    margin-top: auto; /* Pushes actions to the bottom of the card */
-  }
-  
-  /* Optional: Adjust icon size and spacing */
-  .actions button {
-    background: none;
-    border: none;
-    color: #e7e7e75a;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
-    -webkit-text-stroke: 2px #FF9202;
-  }
-  
-  .actions button:hover {
-    color: #FF9202;
-  }
-  
-  .actions button:focus {
-    outline: none;
-  }
-    
-    
-  
-  /* Reviews Section */
-  .reviews {
-    width: 50%;
-    margin-top: 20px;
-  }
-  
-  .reviews h3 {
-    margin-bottom: 15px;
-  }
-  
-  .review-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-  }
-  
-  .review-card p {
-    margin: 5px 0;
-  }
-  
-  .review-card .reviewer {
-    font-style: italic;
-    color: #555;
-  }
-  
+  background-color: #e7e7e75a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.352); /* Create a card shadow */
+  display: flex;
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 80%; /* Takes 80% of the screen width */
+  text-align: left;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1f1f1f2e;
+}
 
-  @font-face {
-    font-family: monts;
-    src: url(fonts/montserrat-regular.ttf);
-  }
-  
+/* Image on the Left */
+.restaurant img {
+  width: 40%; /* Set image to take up 40% of the card */
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* Info on the Right */
+.restaurant-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.restaurant-info h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.restaurant-container .rating {
+  color: #ffe100;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 1px #e2c800; /* Add an outline around the icon */
+
+}
+
+.location {
+  margin-bottom: 10px;
+}
+
+.location a {
+  display: inline-block; /* Makes the link behave like a block-level button */
+  padding: 5px 12px; /* Add padding to make it look like a button */
+  color: #fff; /* Set the text color to white */
+  text-decoration: none; /* Remove the underline */
+  background-color: #007bff; /* Set the background color */
+  border-radius: 5px; /* Round the button corners */
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+}
+
+.location a:hover {
+  background-color: #0056b3; /* Darken the background on hover */
+}
+
+
+.restaurant-info p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Action buttons styling */
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.actions button {
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
+  color: #e7e7e75a; /* Set icon color */
+  cursor: pointer;
+  font-size: 1.2rem; /* Increase icon size if needed */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+  -webkit-text-stroke: 2px #FF9202; /* Add an outline around the icon */
+  transition: -webkit-text-stroke 0.3s ease;
+
+}
+
+.actions button:hover {
+  color: #FF9202;
+}
+
+.actions button:focus {
+  outline: none;
+}
+/* Add Review Button Styling */
+.add-review {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.add-review-btn {
+  background-color: #FF9202;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  font-family: monts;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-review-btn:hover {
+  background-color: #e88900;
+}
+
+
+/* Reviews Section */
+.reviews {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.reviews h3 {
+  margin-bottom: 15px;
+}
+
+.review-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  margin: 5px 0;
+}
+
+.review-card .reviewer {
+  font-style: italic;
+  color: #555;
+}
+
+@font-face {
+  font-family: monts;
+  src: url(fonts/montserrat-regular.ttf);
+}

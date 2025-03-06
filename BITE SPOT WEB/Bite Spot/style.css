@@ -122,8 +122,9 @@ nav ul li a:hover{
   text-align: center;
   background-color: #FF9202; /* Button background color */
   color: white;
-  border: none;
+  border-color: #cd740063;
   border-radius: 0 20px 20px 0; /* Rounded corners on the right */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -208,9 +209,11 @@ nav ul li a:hover{
 
 .restaurant .rating {
   font-size: 1.2rem;
-  color: #d1aa00; /* Gold color for the rating stars */
+  color: #ffe100; /* Gold color for the rating stars */
   margin-top: -10px; /* Moves the rating higher */
   padding-top: 5px; /* Adjusts padding for a finer position */
+  -webkit-text-stroke: 1px #e2c800; /* Add an outline around the icon */
+
 }
 
 
