@@ -214,8 +214,8 @@ nav ul li a:hover{
 .add-review-btn {
   background-color: #FF9202;
   color: white;
-  padding: 10px 20px;
-  font-size: 1.1em;
+  padding: 2px 5px;
+  font-size: 1.1em; /* Font size for "Add Review" */
   font-family: monts;
   border: none;
   border-radius: 5px;
@@ -223,19 +223,87 @@ nav ul li a:hover{
   transition: background-color 0.3s ease;
 }
 
+.add-review-btn .plus-sign {
+  font-size: 2em; /* Larger font size for the + */
+  vertical-align: middle; /* Aligns the + symbol to the middle */
+}
+
 .add-review-btn:hover {
   background-color: #e88900;
 }
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  border-radius: 10px;
+  padding: 20px;
+  width: 40%;
+  border-radius: 10px;
+  color: #333;
+}
+
+.close-btn {
+  color: rgb(255, 44, 44);
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  margin-top: -6px; /* Adjust the value as needed */
+}
+
+
+.close-btn:hover,
+.close-btn:focus {
+  color: rgb(182, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#usernameInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #1f1f1f2e;
+  font-family: monts;
+}
+
+#submitReviewBtn {
+  background-color: #FF9202;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: monts;
+}
+
+
 
 
 /* Reviews Section */
 .reviews {
   width: 80%;
   margin-top: 20px;
+
 }
 
 .reviews h3 {
   margin-bottom: 15px;
+  color: #333;
+
 }
 
 .review-card {
@@ -248,11 +316,13 @@ nav ul li a:hover{
 
 .review-card p {
   margin: 5px 0;
+  color: #333;
+
 }
 
 .review-card .reviewer {
   font-style: italic;
-  color: #555;
+  color: #333;
 }
 
 @font-face {
