@@ -214,7 +214,7 @@ nav ul li a:hover{
 .add-review-btn {
   background-color: #FF9202;
   color: white;
-  padding: 2px 5px;
+  padding: 2px 15px;
   font-size: 1.1em; /* Font size for "Add Review" */
   font-family: monts;
   border: none;
