@@ -55,7 +55,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #FF9202;
+  color: #737373;
   font-weight: bold;
   border-radius: 5px;
   padding: 4px;
@@ -122,7 +122,7 @@ nav ul li a:hover{
   text-align: center;
   background-color: #FF9202; /* Button background color */
   color: white;
-  border-color: #cd740063;
+  border-color: #e5820063;
   border-radius: 0 20px 20px 0; /* Rounded corners on the right */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -131,7 +131,7 @@ nav ul li a:hover{
 
 /* Add hover effect for the button */
 .search button:hover {
-  background-color: #e87c00;
+  background-color: #d07600;
 }
 
 /* Hover effect on the search input */
@@ -179,7 +179,7 @@ nav ul li a:hover{
 
 .restaurant img {
   max-width: 90%;
-  height: 150px; /* Set a fixed height for images */
+  height: 160px; /* Set a fixed height for images */
   object-fit: cover; /* Ensure images cover the set height without stretching */
   border-radius: 10px; /* Rounded corners for the image */
   margin-bottom: 10px;
@@ -200,16 +200,16 @@ nav ul li a:hover{
 .restaurant-title {
   text-align: left;
   margin-bottom: 30px;
-  color: #4d4d4d;
+  color: #333;
   font-size: 20px;
   padding-left: 30px;
 
 }
 
 .restaurant .rating {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #ffe100; /* Gold color for the rating stars */
-  margin-top: -10px; /* Moves the rating higher */
+  margin-top: -5px; /* Moves the rating higher */
   padding-top: 5px; /* Adjusts padding for a finer position */
   -webkit-text-stroke: 1px #e2c800; /* Add an outline around the icon */
 
@@ -229,7 +229,7 @@ nav ul li a:hover{
   font-size: 1.2rem; /* Increase icon size if needed */
   margin: 0 10px; /* Space between the icons */
   transition: color 0.3s ease; /* Smooth color change on hover */
-  -webkit-text-stroke: 2px #FF9202; /* Add an outline around the icon */
+  -webkit-text-stroke: 1.5px #333; /* Add an outline around the icon */
   transition: -webkit-text-stroke 0.3s ease;
 }
 
@@ -287,7 +287,7 @@ nav ul li a:hover{
 .review-title {
   text-align: center;
   margin-bottom: 30px;
-  color: #4d4d4d;
+  color: #333;
   font-size: 2rem;
 }
 @font-face {

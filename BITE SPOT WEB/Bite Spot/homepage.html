@@ -12,17 +12,22 @@
 </head>
 <body>
   <header>
-    <h1>BITESPOT</h1>
+    <a href="homepage.html">
+      <h1>BITESPOT</h1>
+    </a>
   </header>
-
+  
   <nav>
-    <ul>
-      <li><a href="homepage.html">HOME</a></li>
-      <li><a href="#restaurants">RESTAURANTS</a></li>
-      <li><a href="#reviews">REVIEWS</a></li>
-      <li><a href="about.html">ABOUT</a></li>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-links">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="#restaurants">RESTAURANTS</a></li>
+        <li><a href="#reviews">REVIEWS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
     </ul>
-  </nav>
+</nav>
 
   <div class="search-container">
     <div class="search-box">
@@ -52,25 +57,13 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <img src="eros.jpg" alt="Restaurant Image">
         <p class="rating">★★★★★</p>
-
-        <div class="actions">
-          <button><i class="fas fa-heart"></i> </button>
-          <button><i class="fas fa-comment"></i> </button>
-          <button><i class="fas fa-share"></i> </button>
-        </div>
       </a>
   
           <a href="pastil.html" class="restaurant">
             <h3>Chicken Pastil</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <img src="pastil.png" alt="Restaurant Image">
-          <p class="rating">★★★★</p>
-
-          <div class="actions">
-            <button><i class="fas fa-heart"></i> </button>
-            <button><i class="fas fa-comment"></i> </button>
-            <button><i class="fas fa-share"></i> </button>
-          </div>
+          <p class="rating">★★★★</p>         
         </a>
 
           <a href="siomai-rice.html" class="restaurant">
@@ -78,12 +71,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <img src="resto.jpg" alt="Restaurant Image">
             <p class="rating">★★</p>
-
-            <div class="actions">
-              <button><i class="fas fa-heart"></i> </button>
-              <button><i class="fas fa-comment"></i> </button>
-              <button><i class="fas fa-share"></i> </button>
-            </div> 
           </a>
 
             <a href="mcdo.html" class="restaurant">
@@ -91,24 +78,13 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <img src="mcdo.jpg" alt="Restaurant Image">
                 <p class="rating">★★★</p>
-
-                <div class="actions">
-                  <button><i class="fas fa-heart"></i> </button>
-                  <button><i class="fas fa-comment"></i> </button>
-                  <button><i class="fas fa-share"></i> </button>
-                </div>  
               </a>
+
               <a href="eros.html" class="restaurant">
                 <h3>Eros Carinderia</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <img src="eros.jpg" alt="Restaurant Image">
                 <p class="rating">★★★★★</p>
-        
-                <div class="actions">
-                  <button><i class="fas fa-heart"></i> </button>
-                  <button><i class="fas fa-comment"></i> </button>
-                  <button><i class="fas fa-share"></i> </button>
-                </div>
               </a>
           
                   <a href="pastil.html" class="restaurant">
@@ -116,12 +92,6 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   <img src="pastil.png" alt="Restaurant Image">
                   <p class="rating">★★★★</p>
-        
-                  <div class="actions">
-                    <button><i class="fas fa-heart"></i> </button>
-                    <button><i class="fas fa-comment"></i> </button>
-                    <button><i class="fas fa-share"></i> </button>
-                  </div>
                 </a>
         
                   <a href="siomai-rice.html" class="restaurant">
@@ -129,12 +99,6 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <img src="resto.jpg" alt="Restaurant Image">
                     <p class="rating">★★</p>
-        
-                    <div class="actions">
-                      <button><i class="fas fa-heart"></i> </button>
-                      <button><i class="fas fa-comment"></i> </button>
-                      <button><i class="fas fa-share"></i> </button>
-                    </div> 
                   </a>
         
                     <a href="mcdo.html" class="restaurant">
@@ -142,12 +106,6 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <img src="mcdo.jpg" alt="Restaurant Image">
                         <p class="rating">★★★</p>
-        
-                        <div class="actions">
-                          <button><i class="fas fa-heart"></i> </button>
-                          <button><i class="fas fa-comment"></i> </button>
-                          <button><i class="fas fa-share"></i> </button>
-                        </div>  
                       </a>
               </div>
               

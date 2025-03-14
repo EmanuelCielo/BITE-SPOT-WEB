@@ -12,9 +12,11 @@
 </head>
 <body>
   <header>
-    <h1>BITESPOT</h1>
+    <a href="homepage.html">
+      <h1>BITESPOT</h1>
+    </a>
   </header>
-
+  
   <nav>
     <ul>
       <li><a href="homepage.html">HOME</a></li>
@@ -60,13 +62,11 @@
 
     <div id="reviewModal" class="modal">
       <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h3>Enter your username to add a review</h3>
-        <input type="text" id="usernameInput" placeholder="Enter your username">
-        <button id="submitReviewBtn">Submit</button>
+          <span class="close-btn">&times;</span>
+          <div id="modalContentArea">
+          </div>
       </div>
-    </div>
-
+  </div>
     
     <div class="reviews">
       <h3>Reviews:</h3>
@@ -88,6 +88,6 @@
     </div>
   </div>
 
-  <script src="modal.js"></script> <!-- Link to JavaScript file -->
+  <script src="modal.js"></script> 
 </body>
 </html>
