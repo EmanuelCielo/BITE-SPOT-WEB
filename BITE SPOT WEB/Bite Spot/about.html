@@ -4,28 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-    .back-button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    .back-button:hover {
-        background-color: #0056b3;
-    }  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;        
+        }
+
+        body, html {
+            background-color: #fff;
+            font-family: monts;
+            
+        }
+
+        .back-button {
+            position: flex;
+            margin-top: 40px;
+            margin-left: 30px;
+            font-size: 2rem;
+            
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: #5e5e5e;
+            transition: color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            color: #161616;
+        }
+
+        header {
+            font-size: 15px;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 10px;
+            margin-top: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: monts;
+            src: url(fonts/montserrat-regular.ttf);
+        }
+
+
     </style>
 
 </head>
 <body>
+    <div class="back-button">
+        <a href="javascript:void(0);" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
+    
     <header><h1>DEVELOPERS</h1></header>
-    <div class="name"><h1>name</h1> <p>PROJECT MANAGER</p></div>
+    <div class="name"><h1>EMANUEL CIELO</h1> <p>PROJECT MANAGER</p><p>LEAD DEVELOPER</p></div>
+    <div class="name"><h1>ROYAL REX ROYULADA</h1> <p>BACKEND DEVELOPER</p></div>
+    <div class="name"><h1>ANDREW ZACATE</h1> <p>FRONTEND DEVELOPER</p><p>UI DESIGNER</p></div>
+    <div class="name"><h1>JAY KENNETH SORIANO</h1> <p>FRONTEND DEVELOPER</p><p>UI DESIGNER</p></div>
+    <div class="name"><h1>ALDRIN SOLIS</h1> <p>UI DESIGNER</p></div>
+    <div class="name"><h1>JORAINE CEI AGOSTO</h1> <p>DOCUMENTATION</p></div>
 
-    <a href="homepage.html" class="back-button">Back to Homepage</a>
 
 </body>
 </html>

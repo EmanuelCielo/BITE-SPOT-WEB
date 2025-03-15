@@ -17,7 +17,7 @@ body, html {
 }
 
 .burger-image {
-    width: 40%; /* Adjust width as needed */
+    width: 35%; /* Adjust width as needed */
     height: auto;
     order: 2; /* Place image on the right */
     margin-left: 0px; /* Add some space between text and image */
