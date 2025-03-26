@@ -1,0 +1,21 @@
+[
+    {
+      "name": "McDonald's",
+      "location": "Dagupan",
+      "url": "https://maps.app.goo.gl/ZxVsQSjBTF3bYozL9",
+      "description": "Chicken, burger, fries"
+    },
+    {
+      "name": "Jollibee",
+      "location": "Dagupan",
+      "url": "https://maps.app.goo.gl/fmZ3vjZNm65Gtb6g8",
+      "description": "Chicken, burger, fries"
+    },
+    {
+      "name": "pastil",
+      "location": "Dagupan",
+      "url": "https://maps.app.goo.gl/e5v2JoKxNCFBwDA99",
+      "description": "Chicken, pastil"
+    }
+  ]
+  

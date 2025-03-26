@@ -143,6 +143,45 @@ nav ul li a:hover{
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   border-color: #FF9202;
 }
+/* ITO YUNG SUGGESTIONS NA SINASABE KO */
+.suggestion-box {
+  position: absolute;
+  background: #ffffff;
+  border: 2px solid #1f1f1f2e;
+  width: 60%; /* Match search input width */
+  max-width: 500px; /* Match max width of search input */
+  max-height: 200px; /* Set max height for scrolling */
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px; /* Add space between button and suggestions */
+  border-radius: 20px; /* Rounded corners for smooth look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+  
+  /* Center under search button */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.suggestion-box li {
+  padding: 10px 30px;
+  font-size: 20px; /* Match search input text size */
+  cursor: pointer;
+  color: #333;
+  background: #f3f3f3;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  font-family: monts; /* Match search input font */
+}
+
+.suggestion-box li:hover {
+  background: #FF9202;
+  color: white;
+}
+/* Hanggang dito lang hindi na kasama yang . restaurant-grid */
 
 
 .restaurant-grid {
@@ -295,7 +334,18 @@ nav ul li a:hover{
   font-family: monts;
   src: url(fonts/montserrat-regular.ttf);
 }
+#navigation-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px auto;
+  border: 2px solid red; /* Temporary border to see if it appears */
+}
 
 
-
-
+@media screen and (max-width: 1200px) {
+  #navigation-image {
+      display: block; /* Show only when screen size is smaller */
+  }
+}
