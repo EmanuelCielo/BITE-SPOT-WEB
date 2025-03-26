@@ -174,4 +174,21 @@ document.addEventListener("DOMContentLoaded", function () {
       locationBox.style.display = "none";
     }
   });
+
+  //PARA SA SORTING ITO
+  function sortRestaurants() {
+    let sortOrder = document.getElementById("sort").value;
+    let restaurantGrid = document.querySelector(".restaurant-grid");
+    let restaurants = Array.from(restaurantGrid.getElementsByClassName("restaurant"));
+
+    restaurants.sort((a, b) => {
+        let ratingA = a.querySelector(".rating").textContent.length;
+        let ratingB = b.querySelector(".rating").textContent.length;
+        return sortOrder === "asc" ? ratingA - ratingB : ratingB - ratingA;
+    });
+
+    restaurantGrid.innerHTML = "";
+    restaurants.forEach(restaurant => restaurantGrid.appendChild(restaurant));
+}
+//HANGGANG DITO LANG
 });

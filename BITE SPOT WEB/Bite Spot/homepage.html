@@ -49,7 +49,18 @@
 
   <section id="restaurants">
     <h2 class="restaurant-title">Restaurant Suggestions</h2>
-
+    
+    <div class="sort-container">
+      <div class="dropdown">
+        <button class="dropbtn">&#x22EF;</button> <!-- Made the three dots horizontal and bold, BAGO DIN ITO -->
+        <div class="dropdown-content">
+          <a href="#" onclick="filterRestaurants(1); return false;"><span style="color: gold;">★</span></a>
+          <a href="#" onclick="filterRestaurants(2); return false;"><span style="color: gold;">★★</span></a>
+          <a href="#" onclick="filterRestaurants(3); return false;"><span style="color: gold;">★★★</span></a>
+          <a href="#" onclick="filterRestaurants(4); return false;"><span style="color: gold;">★★★★</span></a>
+          <a href="#" onclick="filterRestaurants(5); return false;"><span style="color: gold;">★★★★★</span></a>      
+      </div><!-- HANGGANG DITO -->
+    </div>
 
     <div class="restaurant-grid">
       <a href="http://localhost/bitespot/add_review.php" class="restaurant">
@@ -140,6 +151,62 @@
     </div>
   </section>
 
+  <!-- ABOUT SA SORTING DIN ITO-->
+  <script>
+    function filterRestaurants(star) {
+      let restaurantGrid = document.querySelector(".restaurant-grid");
+      let restaurants = Array.from(restaurantGrid.getElementsByClassName("restaurant"));
+      
+      restaurants.forEach(restaurant => {
+        let rating = restaurant.querySelector(".rating").textContent.trim().length;
+        restaurant.style.display = rating === star ? "block" : "none";
+      });
+    }
+  </script>
+  
+  <!-- ITO NAMAN ADJUSTAN NG 3 DOTS SA SORTING FEATURES-->
+  <style>
+    .dropdown {
+      position: relative;
+      left: 1430px;
+      bottom: 40px; /* adjustment of 3 dots to top*/
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: transparent; /* Removes background */
+      border: none;
+      cursor: pointer;
+      font-size: 33px; /* Increases size of 3 dots*/
+      padding: 10px;
+      font-weight: bold;
+      text-align: right; /* Aligns to the right */
+      display: flex; /* Ensures alignment */
+      justify-content: flex-end;
+   }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: center; /* Centers the stars */
+      left: 50%; /* Centers dropdown relative to the button */
+      transform: translateX(-50%); /* Perfect centering */
+      top: 70%; /* Moves it below the 3 dots */
+      padding: 1px; /* Adds some spacing */
+      border-radius: 8px; /* Rounds corners */
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown:hover .dropdown-content {display: block;}
+  </style>
   
   
 </body>

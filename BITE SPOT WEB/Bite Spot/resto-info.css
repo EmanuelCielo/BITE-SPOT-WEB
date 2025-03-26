@@ -391,3 +391,13 @@ background-color: #e88900;
   font-family: monts;
   src: url(fonts/montserrat-regular.ttf);
 }
+/*BAGO LANG DIN ITO CONNECTED DIN SA SORTING FEATURES*/
+.sort-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.sort-container select {
+  padding: 5px;
+  font-size: 16px;
+}
