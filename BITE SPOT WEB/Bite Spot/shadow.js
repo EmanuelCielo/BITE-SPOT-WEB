@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-/* I CREATE THIS FOR SEARCH FUNCTION AND SUGGESTION*/
+/* I CREATE THIS FOR SEARCH FUNCTION AND SUGGESTION. DITO MAGUUMPISA*/
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector(".search input");
   const searchButton = document.querySelector(".search button");

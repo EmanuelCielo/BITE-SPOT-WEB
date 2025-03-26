@@ -143,7 +143,7 @@ nav ul li a:hover{
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   border-color: #FF9202;
 }
-/* ITO YUNG SUGGESTIONS NA SINASABE KO */
+/* ITO YUNG SUGGESTIONS NA SINASABE KO. ITO LANG DAPAT AYUSIN SA STYLE*/
 .suggestion-box {
   position: absolute;
   background: #ffffff;
