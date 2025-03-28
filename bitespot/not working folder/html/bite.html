@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews with Likes</title>
+</head>
+<body>
+
+<div class="review-card" data-restaurant-id="1">
+    <p>This is a sample review.</p>
+    <button class="like-btn" onclick="handleLike(1)">Like</button>
+    <span id="like-count-1">Likes: 0</span>
+</div>
+
+<script>
+    function handleLike(restaurantId) {
+        fetch('update_likes.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                'restaurant_id': restaurantId,
+                'user_id': 1 //Replace with actual user id
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('like-count-1').textContent = 'Likes: ' + data.count; // Update like count
+                if(data.liked){
+                  document.querySelector('.like-btn').style.backgroundColor = "orange"; //changes color if liked.
+                }else{
+                  document.querySelector('.like-btn').style.backgroundColor = ""; //reset color if unliked.
+                }
+
+            } else {
+                alert(data.message); // Display error message
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred.'); // Generic error alert
+        });
+    }
+
+    // Function to set initial button state
+    function setLikeButtonState(restaurantId, likeButton) {
+        fetch('check_like_status.php?restaurant_id=' + restaurantId, {
+            method: 'GET',
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.liked) {
+                likeButton.style.backgroundColor = 'orange';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    // Call the function on page load
+    var likeButton = document.querySelector('.like-btn');
+    setLikeButtonState(1, likeButton); //set the initial state.
+</script>
+
+</body>
+</html>

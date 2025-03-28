@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.splash-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.burger-image {
+    width: 35%; /* Adjust width as needed */
+    height: auto;
+    order: 2; /* Place image on the right */
+    margin-left: 0px; /* Add some space between text and image */
+    padding-right: 10%;
+}
+
+.text-content {
+    order: 1; /* Place text on the left */
+    text-align: center; /* Align text to the left */
+    width: 50%; /* Adjust width as needed */
+    margin-left: 40px; /* Increase the margin between text and the burger image */
+    padding-left: 10%; /* Optional: Adds internal space around the text */
+    font-family: monts;
+
+    
+}
+
+
+.app-name {
+    font-size: 4rem;
+    color: #ff9202;
+    margin: 20px 0;
+    font-family: monts;
+
+}
+
+
+@font-face {
+    font-family: monts;
+    src: url(fonts/montserrat-regular.ttf);
+  }
+  
+
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+
